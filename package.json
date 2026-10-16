@@ -46,13 +46,9 @@
     "directories": {
       "output": "release"
     },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "GITHUB_KULLANICI_ADIN",
-        "repo": "goodent-releases"
-      }
-    ],
+      "publish": [
+     { "provider": "github", "owner": "ganinn2411", "repo": "goodent-releases" }
+   ],
     "win": {
       "target": "nsis",
       "signAndEditExecutable": false
