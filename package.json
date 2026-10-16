@@ -1,7 +1,7 @@
 {
   "name": "goodent-lab",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -49,7 +49,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "ganinn2411",
+        "owner": "GITHUB_KULLANICI_ADIN",
         "repo": "goodent-releases"
       }
     ],
