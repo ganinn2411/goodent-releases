@@ -1,0 +1,65 @@
+{
+  "name": "goodent-lab",
+  "private": true,
+  "version": "1.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:dev": "vite build && electron .",
+    "electron:build": "vite build && electron-builder --win",
+    "cap:sync": "vite build && cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "electron-updater": "^6.3.0",
+    "html5-qrcode": "^2.3.8",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^32.3.3",
+    "electron-builder": "^25.0.0",
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^0.20.0"
+  },
+  "description": "Goodent Laboratuvar",
+  "author": "Goodent",
+  "main": "electron/main.cjs",
+  "build": {
+    "appId": "com.goodent.lab",
+    "productName": "Goodent Laboratuvar",
+    "artifactName": "Goodent-Setup-${version}.${ext}",
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "ganinn2411",
+        "repo": "goodent-releases"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
